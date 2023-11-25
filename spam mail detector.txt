@@ -1,0 +1,23 @@
+def is_spam(email_content):
+    # List of spam keywords
+    spam_keywords = ["free", "earn money", "viagra", "lottery", "inheritance"]
+
+    # Check if any of the keywords are present in the email content
+    for keyword in spam_keywords:
+        if keyword.lower() in email_content.lower():
+            return True  # Email is marked as spam
+
+    return False  # Email is not spam
+
+def main():
+    # Sample email content
+    email_content = input("Enter the email content:\n")
+
+    # Check if the email is spam
+    if is_spam(email_content):
+        print("This email is likely spam.")
+    else:
+        print("This email is not spam.")
+
+if __name__ == "__main__":
+    main()
